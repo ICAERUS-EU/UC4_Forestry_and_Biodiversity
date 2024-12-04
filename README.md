@@ -3,10 +3,10 @@
   <p>
     <a href="https://icaerus.eu" target="_blank">
       <img width="50%" src="https://icaerus.eu/wp-content/uploads/2022/09/ICAERUS-logo-white.svg"></a>
-    <h3 align="center">UC1: Crop Monitoring📷</h3>
+    <h3 align="center">UC4: Forestry and Biodiversity</h3>
     
    <p align="center">
-    This repository contains Crop Monitoring models developed with drone images and computer vision 
+    This repository contains Forestry and Biodiversity monitoring and analysis algorithms created for Sentinel-2 satellite and UAV mounted hyperspectral camera data 
     <br/>
     <br/>
     <br/>
@@ -19,8 +19,6 @@
 </div>
 
 ![Downloads](https://img.shields.io/github/downloads/icaerus-eu/UC1_Crop_Monitoring/total) ![Contributors](https://img.shields.io/github/contributors/icaerus-eu/UC1_Crop_Monitoring?color=dark-green) ![Forks](https://img.shields.io/github/forks/icaerus-eu/UC1_Crop_Monitoring?style=social) ![Stargazers](https://img.shields.io/github/stars/icaerus-eu/UC1_Crop_Monitoring?style=social) ![Issues](https://img.shields.io/github/issues/icaerus-eu/UC1_Crop_Monitoring) ![License](https://img.shields.io/github/license/icaerus-eu/UC1_Crop_Monitoring) 
-
-# UC4_Forestry_and_Biodiversity
 
 ## Table Of Contents
 
