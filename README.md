@@ -1,41 +1,54 @@
+
+<div align="center">
+  <p>
+    <a href="https://icaerus.eu" target="_blank">
+      <img width="50%" src="https://icaerus.eu/wp-content/uploads/2022/09/ICAERUS-logo-white.svg"></a>
+    <h3 align="center">UC1: Crop Monitoring📷</h3>
+    
+   <p align="center">
+    This repository contains Crop Monitoring models developed with drone images and computer vision 
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <a href="https://github.com/icaerus-eu/icaerus-repo-template/issues">Report Bug</a>
+    -
+    <a href="https://github.com/icaerus-eu/icaerus-repo-template/issues">Request Feature</a>
+  </p>
+</p>
+</div>
+
+![Downloads](https://img.shields.io/github/downloads/icaerus-eu/UC1_Crop_Monitoring/total) ![Contributors](https://img.shields.io/github/contributors/icaerus-eu/UC1_Crop_Monitoring?color=dark-green) ![Forks](https://img.shields.io/github/forks/icaerus-eu/UC1_Crop_Monitoring?style=social) ![Stargazers](https://img.shields.io/github/stars/icaerus-eu/UC1_Crop_Monitoring?style=social) ![Issues](https://img.shields.io/github/issues/icaerus-eu/UC1_Crop_Monitoring) ![License](https://img.shields.io/github/license/icaerus-eu/UC1_Crop_Monitoring) 
+
 # UC4_Forestry_and_Biodiversity
+
 ## Table Of Contents
-- [Summary](#summary)
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [Development](#development)
-- [Testing](#testing)
-- [Documentation](#documentation)
-- [License](#license)
-- [Support](#support)
-- [Security](#security)
-- [Acknowledgments](#acknowledgments)
-- [Resources](#resources)
-- [Gallery](#gallery)
-- [Deployment](#deployment)
-- [Demo](#demo)
-- [Dependencies](#dependencies)
-- [Known Issues](#known-issues)
-- [Roadmap](#roadmap)
+
+* [Summary](#summary)
+* [Structure](#structure)
+* [Models](#models)
+* [Authors](#authors)
+* [Acknowledgements](#acknowledgements)
+
+## Summary
+Within this repository, you'll discover various models and computational tools designed for forestry and biodiversity. #WIP
+
+## Structure
+The repository folders are structured as follow: 
+
+- **data:** here you should add the [] that you could download from Zenodo.
+- **models:** models developed for forestry and biodiversity monitoring
+- **libs:** libraries created for hyperspectral and sentiinel-2 data processing
+
+## Models
 
 
-## Introduction
-Two python libraries are added:
-hyperspectral-lib - library for hyperspectral data processing (specifically Specim hyperspectral camera used)
-sentinel-tools-lib - library for sentinel data colelction and processing using sentinel-hub python API. Only AWS account is required, and not sentinelhub account, all data is downloaded from Sentinel-2 S3 inventory.
-boar-utils  - library for boar thermal data processing base and other utilities. 
-boar-detector - models for boar entity detection in thermal images and counting using the drone coordinates. Algorithm detects the unique boar entities in images and removes duplicates when drone flies over the same area.
-boars-yolo  -  wrapper for yolov5 model for boar detection. Using the objects from boar-utils and sending the detected boars to boar-detector model.
-
-## Instalation
-Libraries can be installed in a Pipenv or Virtualenv using `pip install -e /path/to/libarary/folder/with/setup.py`
-Install library dependencies from library Pipfile or requirements. 
+## Authors
 
 
 ## Acknowledgements
 This project is funded by the European Union, grant ID 101060643.
 
 <img src="https://rea.ec.europa.eu/sites/default/files/styles/oe_theme_medium_no_crop/public/2021-04/EN-Funded%20by%20the%20EU-POS.jpg" alt="https://cordis.europa.eu/project/id/101060643" width="200"/>
+
+
