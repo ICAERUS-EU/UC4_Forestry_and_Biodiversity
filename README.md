@@ -64,9 +64,7 @@ Algorithms created to process raw hyperspectral and thermal data gathered by the
 #### _[Forest health monitoring model using Sentinel-2 multispectral data](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/05_Sentinel2_forest_health)_
 Model created for monitoring forest health using processed Sentinel-2 multispectral and additional data.
 
-#### _[Hyperspectral data processing algorithms](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/06_hyperspectral_processing)_
-
-#### _[Hyperspectral calibration plate detection model](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/07_hyperspectral_calibration_plate_detection)_
+#### _[Hyperspectral data processing algorithms](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/06_hyperspectral_processing)_ and _[Hyperspectral calibration plate detection model](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/07_hyperspectral_calibration_plate_detection)_
 Base hyperspectral data processing algorithms and model created to automatically detect calibration plates in hyperspectral mission that are used to calibrate hyperspectral data from radiance values to reflectance.
 
 
