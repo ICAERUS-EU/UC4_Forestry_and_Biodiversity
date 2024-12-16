@@ -36,7 +36,6 @@ The repository folders are structured as follow:
 
 - **data:** here you should add the Boar, Hyperspectral and Sentinel-2 datasets that you download from Zenodo.
 - **models:** models developed for forestry and biodiversity monitoring
-  - **01_boar_detector_v1:**  Boar detection model created using YOLOv5 and wild boar counting algorithm, used to get locations and count of boars in an area scanned with thermal camera mounted on a UAV.
 - **libs:** libraries created for hyperspectral and sentiinel-2 data processing
   - **hyperspectral-lib:** Python3 library created for hyperspectral data analysis, reading, writing and modelling purposes. 
   - **sentinel-tools-lib:** Python3 library created for sentinel data processing and analysis, with the capabilities of downloading sentinel data from AWS with the help of sentinelhub-py library. 
