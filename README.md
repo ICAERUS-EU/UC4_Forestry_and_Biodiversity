@@ -46,10 +46,40 @@ The repository folders are structured as follow:
 ## Models
 
 The [models](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models) developed are the following:
- 
 
 #### _[Wild boar monitoring and detection model created using YOLOv5](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/01_boar_detector_v1)_
 This model was created using YOLOv5 object detection framework with and extension algorithms created to count unique wild boars in gathered UAV thermal data.
+
+
+#### _[Sentinel-2 data preprocessing algorithms and pipeline]()_
+Algorithms created for automatic raw Sentinel-2 multispectral data processing to a usable dataset based on regions of interest.
+
+#### _[Automated region of interest monitoring models based on Sentinel-2 data]()_
+Models created to automatically monitor regions of interest using Sentinel-2 data and extends the Sentinel-2 preprocessing algorithms.
+
+#### _[Drone data processing pipelines and algorithms]()_
+Algorithms created to process raw hyperspectral and thermal data gathered by the UAVs into datasets usable in modelling.
+
+
+#### _[Forest health monitoring model using Sentinel-2 multispectral data]()_
+Model created for monitoring forest health using processed Sentinel-2 multispectral and additional data.
+
+
+#### _[Hyperspectral data processing algorithms and calibration plate detection model]()_
+Base hyperspectral data processing algorithms and model created to automatically detect calibration plates in hyperspectral mission that are used to calibrate hyperspectral data from radiance values to reflectance.
+
+
+#### _[Automated hyperspectral data clustering model with Convolutional Autoencoders]()_
+Model created to automatically find data clusters (data classes) in hyperspectral data cubes for further analysis base on Convolutional Autoencoders.
+
+
+#### _[Forest health monitoring model using hyperspectral data]()_
+Model for forest health monitoring on processend and clustered hyperspectral data.
+
+
+#### _[Forest fuel evaluation model using hyperspectral data]()_
+Model for forest fuel evaluation on processend and clustered hyperspectral data.
+
 
 ## Authors
 
