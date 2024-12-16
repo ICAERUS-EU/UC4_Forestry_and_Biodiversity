@@ -29,20 +29,31 @@
 * [Acknowledgements](#acknowledgements)
 
 ## Summary
-Within this repository, you'll discover various models and computational tools designed for forestry and biodiversity. #WIP
+Within this repository, you'll discover various models and computational tools designed for forestry and biodiversity. Models created for tree health monitoring system from Sentinel-2 multispectral data, tree health and fire monitoring using UAV mounted hyperspectral cameras, and automatic wild boar monitoring and detection from thermal cameras.
 
 ## Structure
 The repository folders are structured as follow: 
 
-- **data:** here you should add the [] that you could download from Zenodo.
+- **data:** here you should add the Boar, Hyperspectral and Sentinel-2 datasets that you download from Zenodo.
 - **models:** models developed for forestry and biodiversity monitoring
+  - **01_boar_detector_v1:**  Boar detection model created using YOLOv5 and wild boar counting algorithm, used to get locations and count of boars in an area scanned with thermal camera mounted on a UAV.
 - **libs:** libraries created for hyperspectral and sentiinel-2 data processing
+  - **hyperspectral-lib:** Python3 library created for hyperspectral data analysis, reading, writing and modelling purposes. 
+  - **sentinel-tools-lib:** Python3 library created for sentinel data processing and analysis, with the capabilities of downloading sentinel data from AWS with the help of sentinelhub-py library. 
+- **platform.json:** Structured information about the models and their parameters.
+- **README.md:** This file, providing an overview of the repository.
 
 ## Models
 
+The [models](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models) developed are the following:
+ 
+
+#### _[Wild boar monitoring and detection model created using YOLOv5](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/01_boar_detector_v1)_
+This model was created using YOLOv5 object detection framework with and extension algorithms created to count unique wild boars in gathered UAV thermal data.
 
 ## Authors
 
+Vytautas Paura - ART21 - [Vytautas Paura](https://github.com/VytautasPau) 
 
 ## Acknowledgements
 This project is funded by the European Union, grant ID 101060643.
