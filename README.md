@@ -51,33 +51,34 @@ The [models](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/ma
 This model was created using YOLOv5 object detection framework with and extension algorithms created to count unique wild boars in gathered UAV thermal data.
 
 
-#### _[Sentinel-2 data preprocessing algorithms and pipeline]()_
+#### _[Sentinel-2 data preprocessing algorithms and pipeline](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/02_Sentinel2_data_processing)_
 Algorithms created for automatic raw Sentinel-2 multispectral data processing to a usable dataset based on regions of interest.
 
-#### _[Automated region of interest monitoring models based on Sentinel-2 data]()_
+#### _[Automated region of interest monitoring models based on Sentinel-2 data](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/03_Sentinel2_ROI_monitoring)_
 Models created to automatically monitor regions of interest using Sentinel-2 data and extends the Sentinel-2 preprocessing algorithms.
 
-#### _[Drone data processing pipelines and algorithms]()_
+#### _[Drone data processing pipelines and algorithms](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/04_drone_data_processing)_
 Algorithms created to process raw hyperspectral and thermal data gathered by the UAVs into datasets usable in modelling.
 
 
-#### _[Forest health monitoring model using Sentinel-2 multispectral data]()_
+#### _[Forest health monitoring model using Sentinel-2 multispectral data](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/05_Sentinel2_forest_health)_
 Model created for monitoring forest health using processed Sentinel-2 multispectral and additional data.
 
+#### _[Hyperspectral data processing algorithms](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/06_hyperspectral_processing)_
 
-#### _[Hyperspectral data processing algorithms and calibration plate detection model]()_
+#### _[Hyperspectral calibration plate detection model](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/07_hyperspectral_calibration_plate_detection)_
 Base hyperspectral data processing algorithms and model created to automatically detect calibration plates in hyperspectral mission that are used to calibrate hyperspectral data from radiance values to reflectance.
 
 
-#### _[Automated hyperspectral data clustering model with Convolutional Autoencoders]()_
+#### _[Automated hyperspectral data clustering model with Convolutional Autoencoders](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/08_hyperspectral_clustering_CAE)_
 Model created to automatically find data clusters (data classes) in hyperspectral data cubes for further analysis base on Convolutional Autoencoders.
 
 
-#### _[Forest health monitoring model using hyperspectral data]()_
+#### _[Forest health monitoring model using hyperspectral data](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/09_hyperspectral_forest_health)_
 Model for forest health monitoring on processend and clustered hyperspectral data.
 
 
-#### _[Forest fuel evaluation model using hyperspectral data]()_
+#### _[Forest fuel evaluation model using hyperspectral data](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/10_hyperspectral_forest_fuel)_
 Model for forest fuel evaluation on processend and clustered hyperspectral data.
 
 
