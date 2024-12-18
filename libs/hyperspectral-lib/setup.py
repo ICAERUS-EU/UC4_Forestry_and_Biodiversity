@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 setup(
-    name="specimlib",
-    version="0.2",
+    name="spectrallib",
+    version="0.3",
     packages=find_packages(),
 )
