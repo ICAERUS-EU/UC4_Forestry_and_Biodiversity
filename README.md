@@ -49,6 +49,8 @@ The [models](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/ma
 #### _[Wild boar monitoring and detection model created using YOLOv5](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/01_boar_detector_v1)_
 This model was created using YOLOv5 object detection framework with and extension algorithms created to count unique wild boars in gathered UAV thermal data.
 
+#### _[Wild boar detection model created using YOLOv11](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/01_boar_detector_v2)_
+This model was created using YOLOv11 object detection framework. Only the detection model is given here, the counting framework remains the same as in boar_detector_v1.
 
 #### _[Sentinel-2 data preprocessing algorithms and pipeline](https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/02_Sentinel2_data_processing)_
 Algorithms created for automatic raw Sentinel-2 multispectral data processing to a usable dataset based on regions of interest.

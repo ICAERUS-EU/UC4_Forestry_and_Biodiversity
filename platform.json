@@ -32,4 +32,38 @@
             ]
         }
     },
+    {
+        "title": "Wild Boar Detection Models Using YOLOv11",
+        "creator": "ART21",
+        "date": "2025/04/03",
+        "icon": "https://github.com/ICAERUS-EU/UC1_Crop_Monitoring/assets/148956768/04434b88-4913-4eb2-9af2-a2b67ff70cd9",
+        "url": "https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/01_boar_detector_v2",
+        "icaerus_applications": [
+            "biodiversity monitoring"
+        ],
+        "uses_cases": [
+            "4"
+        ],
+        "extra": {
+            "key1": "",
+            "key2": ""
+        },
+        "filters": {
+            "content": [
+                "Deep learning",
+                "Computer vision",
+                "Detection",
+                "YOLO 11"
+            ],
+            "data-type": [
+                "Thermal images with white-hot color pallete"
+            ],
+            "subject": [
+                "Wild Boars in Forests and Fields"
+            ],
+            "location": [
+                "Lithuania"
+            ]
+        }
+    },
 ]
