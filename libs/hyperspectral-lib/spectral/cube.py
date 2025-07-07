@@ -1,7 +1,7 @@
 import rasterio
 import numpy as np
 import os
-from spectral.utils import spectral_calculator
+from spectral.utils import spectral_calculator, calibrate 
 import time
 from spectral.rgb import RGB
 from PIL import Image
@@ -11,7 +11,6 @@ from shapely import geometry
 from shapely.ops import transform
 import pyproj
 import requests
-import utils
 import json
 
 
@@ -58,6 +57,9 @@ class Cube:
         self._load_metadata()
         if self.verbose:
             print(f"Cube {self.cube_path} read, metadata: \n {self.metadata}")
+
+    def __str__(self):
+        return f"Hyperspectral Cube: {self.cube_path}, Metadata: {self.metadata}"
 
     def _wavelength_load(self):
         """
@@ -116,9 +118,14 @@ class Cube:
         return self._rgb
 
     @property
-    def shape(self):
+    def shape(self, force_data_load=False):
         if self._data is None:
-            self._load_data()
+            if force_data_load:
+                self._load_data()
+                return self._data.shape
+            else:
+                shape = (self.metadata['height'], self.metadata['width'], self.metadata['count'])
+                return shape
         return self._data.shape
 
     def save_rgb(self, out_path=None, overwrite=False):
@@ -277,7 +284,6 @@ class Calibration:
     def _cut_tiff_with_poly(self, poly):
         """
         Cuts the tiff using provided polygon.
-        
         Params:
             tiff: str
                 path to .tiff file
@@ -298,13 +304,12 @@ class Calibration:
         with rasterio.open(self.calibration_cube) as src:
             out_image, out_transform = mask(src, [geom], crop=True)
             out_meta = src.meta
-        
         out_image = np.transpose(out_image, (1, 2, 0))
         return out_image
 
     @classmethod
     def gather_dark(cls, dark_raster):
-        if type(dark_raster) == str:  # skip loading if not a path given
+        if type(dark_raster) is str:  # skip loading if not a path given
             with rasterio.open(dark_raster, "r") as fl:
                 data = fl.read()
             data = np.average(data, axis=(1, 2))[np.newaxis, :]
@@ -323,7 +328,7 @@ class Calibration:
             self.cal_val.append(float(cal_file[0]))
         self.cal_data = np.array(self.cal_data)
         self.cal_val = np.array(self.cal_val)
-    
+
     def _load_data(self):
         """
         Loads cube data into memory. Transposes to shape x, y, wl
@@ -343,5 +348,4 @@ class Calibration:
         return self._data
 
     def _calibrate(self):
-        self._data = utils.calibrate(self._data, self.cal_data, self.cal_val, self.gather_dark(self.dark_path))
-
+        self._data = calibrate(self._data, self.cal_data, self.cal_val, self.gather_dark(self.dark_path))

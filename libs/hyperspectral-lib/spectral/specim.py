@@ -6,9 +6,9 @@ from spectral.utils import spectral_calculator
 import time
 from PIL import Image
 import copy
-from .base import BaseIndexProcessor, BaseSpectralLoader, BaseSpectralReader, BaseSpectralWriter, BaseSpectralProcessor
-import colour
+from .base import BaseSpectralLoader, BaseSpectralReader, BaseSpectralWriter, BaseSpectralProcessor, BaseIndexProcessor
 import math
+import colour
 
 
 SPECIM_WAVELENGTHS_2X1 = np.array([397.66, 400.28, 402.9, 405.52, 408.13, 410.75, 413.37, 416, 418.62, 421.24, 423.86, 426.49, 429.12, 431.74, 434.37, 437, 439.63, 442.26, 444.89, 447.52, 450.16,
@@ -456,7 +456,6 @@ class MaskProcessor(BaseSpectralProcessor):
         return total > self.value
 
 
-
 class RGBProcessor(BaseSpectralProcessor):
     """
     Spectral data converter to RGB
@@ -651,6 +650,7 @@ class MinMaxScaler(BaseSpectralProcessor):
         return self._max
 
     def process(self, X):
+        X = X.astype(np.float32)
         if self.feature_range[0] >= self.feature_range[1]:  # taken from scikit learn library :D
             raise ValueError(
                 "Minimum of desired feature range must be smaller than maximum. Got %s."
@@ -668,10 +668,10 @@ class MinMaxScaler(BaseSpectralProcessor):
             self._min = self.f_min
         if self.f_max is not None:
             self._max = self.f_max
-        scaled = (X - self._min) / (self._max - self._min)
+        X = (X - self._min) / (self._max - self._min)
         if self.feature_range[0] == 0 and self.feature_range[1] == 1:
-            return scaled
-        return scaled * (self.feature_range[1] - self.feature_range[0]) + self.feature_range[0]
+            return X
+        return X * (self.feature_range[1] - self.feature_range[0]) + self.feature_range[0]
 
 
 class FloatUint8Converter(BaseSpectralProcessor):
@@ -973,7 +973,6 @@ class SpecimBlockWriter(BaseSpectralWriter):
 class SpecimBlockImageWriter(BaseSpectralWriter):
     """
     Image writer uses rgb or grayscale dataset and write the to given file (png or jpg) using PIL library.
-    
     Pil save images of dtype uint8 only. For accurate results float needs to be in the range of 0-1.
 
     Using the data store to collect blocks of data then write them to the image.
@@ -1042,5 +1041,3 @@ class SpecimBlockImageWriter(BaseSpectralWriter):
                 im.save(self.parameters["full_path"])
         else:
             self.store(X, state)
-
-

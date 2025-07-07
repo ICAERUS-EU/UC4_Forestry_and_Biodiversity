@@ -1,12 +1,12 @@
 import os
 import numpy as np
+from baselib.base import ReaderBase
 
 
-class Radiometer:
+class Radiometer(ReaderBase):
     def __init__(self, path, spectral_file_extensions=["txt"]):
         """
         Parameters
-            
             path : str
                 absolute path to file or folder of radiometer files
         """
@@ -17,7 +17,6 @@ class Radiometer:
         self.files = []
         self._data = None
         self._parse_path()
-        self._read_data()
 
     def _check_extension(self, file_path):
         filename, file_extension = os.path.splitext(file_path)
@@ -31,7 +30,7 @@ class Radiometer:
         return len(self.files)
 
     def _parse_path(self):
-        assert type(self.path) == str, "Given path is not a string, please provide a path string"
+        assert type(self.path) is str, "Given path is not a string, please provide a path string"
         self.isdir = os.path.isdir(self.path)
         if self.isdir:
             all_files = [os.path.join(self.path, f) for f in os.listdir(self.path) if os.path.isfile(os.path.join(self.path, f))]
@@ -49,12 +48,19 @@ class Radiometer:
             else:
                 self._data = np.append(self._data, self.read_file(fl, self.delimiter_string)[np.newaxis, :], axis=0)
 
+    def read(self):
+        """
+        Reads the data from the given path.
+        """
+        if self._data is None:
+            self._read_data()
+
     @property
     def data(self):
         if self._data is None:
             self._read_data()
         return self._data
-        
+
     @staticmethod
     def read_file(path, delimiter_string):
         with open(path, "r") as fr:
@@ -68,4 +74,3 @@ class Radiometer:
                 if delimiter_string in ln:
                     delimiter = True
         return np.array(values)
-

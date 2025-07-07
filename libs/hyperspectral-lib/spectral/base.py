@@ -1,7 +1,8 @@
+from baselib.base import ReaderBase, LoaderBase, WriterBase, ProcessorMixin
 from abc import ABC, abstractmethod
 
 
-class BaseSpectralReader(ABC):
+class BaseSpectralReader(ReaderBase):
     """
     Base spectral data reader class for different, hyperspectral and other types of spectra, readers
 
@@ -12,12 +13,10 @@ class BaseSpectralReader(ABC):
         self._wavelength = None
         self._metadata = None
 
-    @abstractmethod
     def _load_metadata(self):
-        pass
+        raise NotImplementedError
 
     @property
-    @abstractmethod
     def metadata(self):
         """
         Base metadata property
@@ -25,13 +24,11 @@ class BaseSpectralReader(ABC):
         Return metadata about the spectral data read
         """
         return self._metadata
-    
-    @abstractmethod
+
     def _load_wavelength(self):
-        pass
+        raise NotImplementedError
 
     @property
-    @abstractmethod
     def wavelength(self):
         """
         Base metadata property
@@ -41,7 +38,7 @@ class BaseSpectralReader(ABC):
         return self._wavelength
 
 
-class BaseSpectralLoader(ABC):
+class BaseSpectralLoader(LoaderBase):
     """
     Base spectral data loader.
 
@@ -53,8 +50,7 @@ class BaseSpectralLoader(ABC):
     def __init__(self):
         self._state = None
         self._data = None
-    
-    @abstractmethod
+
     def _loader(self):
         """
         Data loader using the method implemented (eg. Full load at once, partial pixel load, partial band load, single file load) 
@@ -63,9 +59,8 @@ class BaseSpectralLoader(ABC):
 
         return read data
         """
-        pass
+        raise NotImplementedError
 
-    @abstractmethod
     def load(self, metadata):
         """
         Loader function that read required files unsing the metadata provided
@@ -77,31 +72,28 @@ class BaseSpectralLoader(ABC):
         yield self._loader(metadata)
 
     @property
-    @abstractmethod
     def data(self):
         return self._data
-    
+
     @property
-    @abstractmethod
     def state(self):
         return self._state
 
 
-class BaseSpectralProcessor(ABC):
+class BaseSpectralProcessor(ProcessorMixin):
     """
     Base spectral data processing class
-    
+
     Takes data from BaseSpectralLoader
 
     return processed data, agnostic to the BaseSpectralLoader state, uses only wavelength if required (eg. for rgb conversion).
     """
-    
-    @abstractmethod
+
     def process(self, X, y=None, wavelength=None):
-        pass
+        raise NotImplementedError
 
 
-class BaseSpectralWriter(ABC):
+class BaseSpectralWriter(WriterBase):
     """
     Base spectral data writer
 
@@ -112,7 +104,6 @@ class BaseSpectralWriter(ABC):
         self.metadata = metatada
         self._store = None
 
-    @abstractmethod
     def store(self, X, status):
         """
         Temporary data storage function, if the data has to be written all at once (eg. Geotiff raster or png image)
@@ -121,9 +112,8 @@ class BaseSpectralWriter(ABC):
 
         Is used by the write funtion to finalize writing
         """
-        pass
+        raise NotImplementedError
 
-    @abstractmethod
     def write(self, X, status, parameters):
         """
         Data writer function
@@ -131,44 +121,21 @@ class BaseSpectralWriter(ABC):
         Implement data store check if data store is used
 
         Uses metadata from BaseSpectralReader to write files
-        
+
         Additional parameters required (output path, data types or other)
         """
-        if self._store is None:
-            pass
-        else:
-            pass
+        raise NotImplementedError
 
 
-class BaseIndexProcessor(ABC):
+class BaseIndexProcessor(ProcessorMixin):
     """
     Base spectral index calculation class
 
     Takes input data as separate bands required be the index.
     """
 
-    @abstractmethod
-    def process(self, band1, band2):
-        pass
-
-
-class BaseSpectralModel(ABC):
-    """
-    Base model class for creating hyperspectral data processing models
-
-    Based on sklearn exmaples. Implements predict function to run in the processing pipeline.
-    """
-
-    @abstractmethod
-    def __init__(self, parameters=None):
-        """
-        List parameter separately or as a dictionary
-        """
-        self.parameters = parameters
-
-    @abstractmethod
-    def predict(self, X, y=None):
-        pass
+    def process(self, X, y, **kwargs):  # X- band1, y- band2, kwargs- other parameters
+        raise NotImplementedError
 
 
 class BasePipeline(ABC):
@@ -182,4 +149,3 @@ class BasePipeline(ABC):
     @abstractmethod
     def run(self, calibration=None):
         pass
-

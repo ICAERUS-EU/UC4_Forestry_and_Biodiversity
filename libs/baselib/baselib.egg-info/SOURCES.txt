@@ -1,0 +1,13 @@
+README.md
+setup.py
+baselib/__init__.py
+baselib/analysis.py
+baselib/base.py
+baselib/rgb.py
+baselib/signal.py
+baselib/utils.py
+baselib.egg-info/PKG-INFO
+baselib.egg-info/SOURCES.txt
+baselib.egg-info/dependency_links.txt
+baselib.egg-info/requires.txt
+baselib.egg-info/top_level.txt
