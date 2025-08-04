@@ -250,7 +250,7 @@ def result(model, input_shape, data_cube: Cube, device, min1: int = 0, max1: int
     np.astype(data, "float32")
     if smoothing is not None:
         data = smoothing(data)
-    results = np.zeros((size[0], size[1]))
+    results = np.zeros((size[0], size[1]), dtype="uint8")
     size_x = input_shape[0]
     size_y = input_shape[1]
     xsize = size[0] // size_x
@@ -297,7 +297,7 @@ def train(params, loader, device):
             # forward pass
             y_pred, clusters, latent = model(X)
             loss1 = loss_fn(y_pred, X)
-            loss2 = gamma * loss_clust(torch.log(clusters), tar_dist) / batch_size
+            loss2 = params["gamma"] * loss_clust(torch.log(clusters), tar_dist) / batch_size
             loss = loss1 + loss2
             rec_loss += loss1
             clust_loss += loss2
@@ -347,6 +347,7 @@ def Main(vars):
         np.save(vars['cube'].replace(".dat", ".npy"), res)
     else:
         np.save(vars['out'], res)
+
 
 def parse_opt():
     parser = argparse.ArgumentParser()

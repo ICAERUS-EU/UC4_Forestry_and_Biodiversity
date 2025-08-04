@@ -83,7 +83,7 @@ Model for forest fuel evaluation on processend and clustered hyperspectral data.
 
 ## Authors
 
-Vytautas Paura - ART21 - [Vytautas Paura](https://github.com/VytautasPau) 
+Vytautas Paura - Beta via - [Vytautas Paura](https://github.com/VytautasPau) 
 
 ## Acknowledgements
 This project is funded by the European Union, grant ID 101060643.
