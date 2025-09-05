@@ -8,7 +8,7 @@ from spectral.cube import Cube
 from spectral.specim import MinMaxScaler, SpecimFullImageWriter
 from sklearn.preprocessing import normalize as vector_norm
 
-MODEL_PARAMETERS = {"base_model": {"weights": "../weights/hyperspectral_calibration_plate_detection_v1.pth", "in_shape": 224, "out_shape": 4}}
+MODEL_PARAMETERS = {"base_model": {"weights": "../weights/hyperspectral_calibration_plate_detection_v2.pth", "in_shape": 224, "out_shape": 7}}
 
 
 def out_size_calc(in_size, kernel, stride=1, padding=0, dilation=1):
