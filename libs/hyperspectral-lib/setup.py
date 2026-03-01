@@ -10,7 +10,6 @@ setup(
         "shapely",
         "pyproj",
         "matplotlib",
-        "colour-science",
-        "baselib @ git+https://oauth:ByQhV9x8qW_vxb5VBfLU@gitlab.art21.lt/ai-projektai/baselib.git#egg=baselib"
+        "colour-science"
     ]
 )

@@ -1,0 +1,89 @@
+MAP
+    NAME "Map1"
+    # Extent pagal input tiff
+    EXTENT __minx__ __miny__ __maxx__ __maxy__
+    SIZE __sizex__ __sizey__
+    MAXSIZE __maxsize__
+    IMAGETYPE PNG
+
+    OUTPUTFORMAT
+        NAME PNG
+        DRIVER AGG/PNG
+        MIMETYPE "image/png"
+        IMAGEMODE RGB
+        EXTENSION "png"
+        FORMATOPTION "GAMMA=0.75"
+    END
+
+    OUTPUTFORMAT
+        NAME GTiff
+        DRIVER "GDAL/GTIff"
+        MIMETYPE "image/tiff"
+        IMAGEMODE RGB
+        EXTENSION "tif"
+    END
+
+    OUTPUTFORMAT
+        NAME GTiffRaw
+        DRIVER "GDAL/GTIff"
+        MIMETYPE "image/tiff"
+        IMAGEMODE INT16
+        EXTENSION "tif"
+    END
+
+    OUTPUTFORMAT
+        NAME GTiffRawFloat
+        DRIVER "GDAL/GTIff"
+        MIMETYPE "image/tiff"
+        IMAGEMODE FLOAT32
+        EXTENSION "tif"
+    END
+
+    PROJECTION
+        "init=__EPSG__"
+    END
+
+    WEB
+        METADATA
+            ows_title "MapServer Quickstart"
+            ows_enable_request "*"
+            ows_srs "EPSG:4326 EPSG:25832 EPSG:25833 EPSG:32634 EPSG:3346 EPSG:3857 EPSG:32635"
+        END
+    END
+
+    LAYER
+        NAME "RGB"
+        STATUS ON
+        TYPE RASTER
+        DATA "__RGB_PATH__"
+        # use metadata to describe available outputformats for this layer
+        METADATA 
+           "1" "PNG"
+           "2" "png8"
+        END
+    END
+
+    LAYER
+        NAME "RGBNDVI"
+        STATUS ON
+        TYPE RASTER
+        DATA "__RGB_NDVI_PATH__"
+        METADATA 
+           "1" "PNG"
+           "2" "png8"
+        END
+    END
+
+    LAYER
+        NAME "NDVI"
+        STATUS ON
+        TYPE RASTER
+        DATA "__NDVI_PATH__"
+        METADATA 
+           "1" "GTiff"
+           "2" "GTiffRaw"
+           "3" "GTiffRawFloat"
+        END
+    END
+
+END
