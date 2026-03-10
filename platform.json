@@ -66,4 +66,300 @@
             ]
         }
     },
+    {
+        "title": "Sentinel-2 Data Processing Algorithms",
+        "creator": "BetaVia",
+        "date": "2026/03/03",
+        "icon": "https://github.com/ICAERUS-EU/UC1_Crop_Monitoring/assets/148956768/04434b88-4913-4eb2-9af2-a2b67ff70cd9",
+        "url": "https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/02_Sentinel2_data_processing",
+        "icaerus_applications": [
+            "forest monitoring"
+        ],
+        "uses_cases": [
+            "4"
+        ],
+        "extra": {
+            "key1": "",
+            "key2": ""
+        },
+        "filters": {
+            "content": [
+                "Sentinel-2",
+                "EODATA"
+            ],
+            "data-type": [
+                "Sentinel-2 open data"
+            ],
+            "subject": [
+                "Sentinel-2 data downloading and processing"
+            ],
+            "location": [
+                "Lithuania",
+                "Europe"
+            ]
+        }
+    },
+    {
+        "title": "Sentinel-2 Data ROI Processing Algorithms",
+        "creator": "BetaVia",
+        "date": "2026/03/03",
+        "icon": "https://github.com/ICAERUS-EU/UC1_Crop_Monitoring/assets/148956768/04434b88-4913-4eb2-9af2-a2b67ff70cd9",
+        "url": "https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/03_Sentinel2_ROI_monitoring",
+        "icaerus_applications": [
+            "forest monitoring"
+        ],
+        "uses_cases": [
+            "4"
+        ],
+        "extra": {
+            "key1": "",
+            "key2": ""
+        },
+        "filters": {
+            "content": [
+                "Sentinel-2",
+                "EODATA",
+                "CLC"
+            ],
+            "data-type": [
+                "Sentinel-2 downloaded data"
+            ],
+            "subject": [
+                "Sentinel-2 data processing with selected ROI from CLC classification"
+            ],
+            "location": [
+                "Lithuania",
+                "Europe"
+            ]
+        }
+    },
+    {
+        "title": "Drone Hyperspectral Data Processing Model and Pipelines",
+        "creator": "BetaVia",
+        "date": "2026/03/03",
+        "icon": "https://github.com/ICAERUS-EU/UC1_Crop_Monitoring/assets/148956768/04434b88-4913-4eb2-9af2-a2b67ff70cd9",
+        "url": "https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/04_drone_data_processing",
+        "icaerus_applications": [
+            "biodiversity monitoring"
+        ],
+        "uses_cases": [
+            "4"
+        ],
+        "extra": {
+            "key1": "",
+            "key2": ""
+        },
+        "filters": {
+            "content": [
+                "Hyperspectral",
+                "Drones"
+            ],
+            "data-type": [
+                "Hyperspectral UAV"
+            ],
+            "subject": [
+                "Hyperspectral UAV data processing to RGB and NDVI images"
+            ],
+            "location": [
+                "Lithuania"
+            ]
+        }
+    },
+    {
+        "title": "Sentinel-2 Forest Health Monitoring Model",
+        "creator": "BetaVia",
+        "date": "2026/03/03",
+        "icon": "https://github.com/ICAERUS-EU/UC1_Crop_Monitoring/assets/148956768/04434b88-4913-4eb2-9af2-a2b67ff70cd9",
+        "url": "https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/05_Sentinel2_forest_health",
+        "icaerus_applications": [
+            "forest monitoring"
+        ],
+        "uses_cases": [
+            "4"
+        ],
+        "extra": {
+            "key1": "",
+            "key2": ""
+        },
+        "filters": {
+            "content": [
+                "Sentinel-2",
+                "Vegetation indicies"
+            ],
+            "data-type": [
+                "Sentinel-2 bands and SCL"
+            ],
+            "subject": [
+                "Sentinel-2 vegetation index changes over time in the selected ROI for health monitoring"
+            ],
+            "location": [
+                "Lithuania",
+                "Europe"
+            ]
+        }
+    },
+    {
+        "title": "Raw Hyperspectral Data Processing Algorithms and Pipelines",
+        "creator": "BetaVia",
+        "date": "2026/03/03",
+        "icon": "https://github.com/ICAERUS-EU/UC1_Crop_Monitoring/assets/148956768/04434b88-4913-4eb2-9af2-a2b67ff70cd9",
+        "url": "https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/06_hyperspectral_processing",
+        "icaerus_applications": [
+            "forest monitoring"
+        ],
+        "uses_cases": [
+            "4"
+        ],
+        "extra": {
+            "key1": "",
+            "key2": ""
+        },
+        "filters": {
+            "content": [
+                "Hyperspectral"
+            ],
+            "data-type": [
+                "Raw Hyperspectral UAV"
+            ],
+            "subject": [
+                "Hyperspectral UAV data calibration using calibration plate detection model predictions"
+            ],
+            "location": [
+                "Lithuania"
+            ]
+        }
+    },
+    {
+        "title": "Hyperspectral Calibraion Plate Detection Model",
+        "creator": "BetaVia",
+        "date": "2026/03/03",
+        "icon": "https://github.com/ICAERUS-EU/UC1_Crop_Monitoring/assets/148956768/04434b88-4913-4eb2-9af2-a2b67ff70cd9",
+        "url": "https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/07_hyperspectral_calibration_plate_detection",
+        "icaerus_applications": [
+            "forest monitoring"
+        ],
+        "uses_cases": [
+            "4"
+        ],
+        "extra": {
+            "key1": "",
+            "key2": ""
+        },
+        "filters": {
+            "content": [
+                "Hyperspectral",
+                "Neural networks"
+            ],
+            "data-type": [
+                "Raw Hyperspectral UAV"
+            ],
+            "subject": [
+                "Hyperspectral UAV calibration plate detection model"
+            ],
+            "location": [
+                "Lithuania"
+            ]
+        }
+    },
+    {
+        "title": "Hyperspectral Data Automated Clustering Using Convolutional Autoencoders",
+        "creator": "BetaVia",
+        "date": "2026/03/03",
+        "icon": "https://github.com/ICAERUS-EU/UC1_Crop_Monitoring/assets/148956768/04434b88-4913-4eb2-9af2-a2b67ff70cd9",
+        "url": "https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/08_hyperspectral_clustering_CAE",
+        "icaerus_applications": [
+            "forest monitoring"
+        ],
+        "uses_cases": [
+            "4"
+        ],
+        "extra": {
+            "key1": "",
+            "key2": ""
+        },
+        "filters": {
+            "content": [
+                "Hyperspectral",
+                "Neural networks",
+                "PyTorch",
+                "AutoEncoders"
+            ],
+            "data-type": [
+                "Raw Hyperspectral UAV"
+            ],
+            "subject": [
+                "Hyperspectral data clustering autoencoder model"
+            ],
+            "location": [
+                "Lithuania"
+            ]
+        }
+    },
+    {
+        "title": "Hyperspectral Forest Health Monitroing Model",
+        "creator": "BetaVia",
+        "date": "2026/03/03",
+        "icon": "https://github.com/ICAERUS-EU/UC1_Crop_Monitoring/assets/148956768/04434b88-4913-4eb2-9af2-a2b67ff70cd9",
+        "url": "https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/09_hyperspectral_forest_health",
+        "icaerus_applications": [
+            "forest monitoring"
+        ],
+        "uses_cases": [
+            "4"
+        ],
+        "extra": {
+            "key1": "",
+            "key2": ""
+        },
+        "filters": {
+            "content": [
+                "Hyperspectral",
+                "Neural networks",
+                "PyTorch",
+                "AutoEncoders"
+            ],
+            "data-type": [
+                "Calibrated hyperspectral data"
+            ],
+            "subject": [
+                "Hyperspectral data processing and health monitoring models"
+            ],
+            "location": [
+                "Lithuania"
+            ]
+        }
+    },
+    {
+        "title": "Forest Fuel Evaluation Model Using Hyperspectral Data Cubes",
+        "creator": "BetaVia",
+        "date": "2026/03/03",
+        "icon": "https://github.com/ICAERUS-EU/UC1_Crop_Monitoring/assets/148956768/04434b88-4913-4eb2-9af2-a2b67ff70cd9",
+        "url": "https://github.com/ICAERUS-EU/UC4_Forestry_and_Biodiversity/tree/main/models/09_hyperspectral_forest_health",
+        "icaerus_applications": [
+            "forest monitoring"
+        ],
+        "uses_cases": [
+            "4"
+        ],
+        "extra": {
+            "key1": "",
+            "key2": ""
+        },
+        "filters": {
+            "content": [
+                "Hyperspectral",
+                "Neural networks",
+                "PyTorch"
+            ],
+            "data-type": [
+                "Calibrated hyperspectral data"
+            ],
+            "subject": [
+                "Forest fuel evaluation from hyperspectral data."
+            ],
+            "location": [
+                "Lithuania"
+            ]
+        }
+    }
 ]

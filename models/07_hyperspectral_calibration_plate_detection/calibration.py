@@ -9,7 +9,8 @@ from spectral.specim import MinMaxScaler, SpecimFullImageWriter
 from sklearn.preprocessing import normalize as vector_norm
 
 MODEL_PARAMETERS = {"base_model": {"weights": "../weights/hyperspectral_calibration_plate_detection_v2.pth", "in_shape": 224, "out_shape": 7}}
-
+# out calibration values: [background, plate 10%, plate 15%, plate 40%, plate 5%, plate 50%, plate 94%]
+CALIB_VALUES = [None, 0.1, 0.15, 0.4, 0.05, 0.5, 0.94]
 
 def out_size_calc(in_size, kernel, stride=1, padding=0, dilation=1):
     return math.floor((in_size + 2 * padding - dilation * (kernel - 1) -1) / stride + 1)
