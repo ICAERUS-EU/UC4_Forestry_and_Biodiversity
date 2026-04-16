@@ -102,8 +102,8 @@ def Main(params):
     # Download CLC tiff file and point to it
     clc_tiff_path = params["clcpath"]
     clc_out_dir = params["clcdir"]
-    clc_tiff_path = "/mnt/8TB/01-Strukturuotas/Satellite/55321/Results/u2018_clc2018_v2020_20u1_raster100m/DATA/U2018_CLC2018_V2020_20u1.tif"
-    clc_out_dir = "/mnt/8TB/01-Strukturuotas/Satellite/55321/Results/u2018_clc2018_v2020_20u1_raster100m/DATA/"  
+    #clc_tiff_path = "/mnt/8TB/01-Strukturuotas/Satellite/55321/Results/u2018_clc2018_v2020_20u1_raster100m/DATA/U2018_CLC2018_V2020_20u1.tif"
+    #clc_out_dir = "/mnt/8TB/01-Strukturuotas/Satellite/55321/Results/u2018_clc2018_v2020_20u1_raster100m/DATA/"  
     clc_out_filename = "LT"  # no extension
     path_to_shp = "LT.geojson"
 
